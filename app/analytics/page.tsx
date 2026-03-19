@@ -62,16 +62,16 @@ export default function AnalyticsPage() {
         }
       });
 
-      const mkChart = (ref: React.RefObject<HTMLCanvasElement>, key: string, type: string, data: any, extraOpts: any = {}) => {
-        const inst = chartInstances.current[key] as any;
-        if (inst?.destroy) inst.destroy();
-        if (!ref.current) return;
-        chartInstances.current[key] = new Chart(ref.current, {
-          type: type as any,
-          data,
-          options: { ...baseOpts(type), ...extraOpts }
-        });
-      };
+      const mkChart = (ref: React.RefObject<HTMLCanvasElement | null>, key: string, type: string, data: any, extraOpts: any = {}) => {
+  const inst = chartInstances.current[key] as any;
+  if (inst?.destroy) inst.destroy();
+  if (!ref.current) return;
+  chartInstances.current[key] = new Chart(ref.current, {
+    type: type as any,
+    data,
+    options: { ...baseOpts(type), ...extraOpts }
+  });
+};
 
       mkChart(impRef, "imp", "line", {
         labels,
