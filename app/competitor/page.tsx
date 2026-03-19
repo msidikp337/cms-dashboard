@@ -1,0 +1,15 @@
+"use client";
+
+export default function CompetitorPage() {
+  return (
+    <div style={{ minHeight: "100vh", background: "#0c0c14", color: "#e2e8f0" }}>
+      <div style={{ background: "#10101c", borderBottom: "0.5px solid #1e1e30", padding: "14px 20px" }}>
+        <p style={{ fontSize: "15px", fontWeight: 500, margin: 0 }}>Competitor Tracker</p>
+        <p style={{ fontSize: "11px", color: "#4a4a6a", margin: 0 }}>Monitor rivals across platforms</p>
+      </div>
+      <div style={{ padding: "40px 20px", textAlign: "center" }}>
+        <p style={{ fontSize: "14px", color: "#4a4a6a" }}>Competitor tracker coming soon</p>
+      </div>
+    </div>
+  );
+}
